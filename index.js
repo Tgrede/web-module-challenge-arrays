@@ -46,8 +46,13 @@ Use the copy function below to do the following:
 */
 
 function copy(array1){
-    
+    let array2 = []
+    for (i = 0; i < array1.length; i++){
+        array2[i] = array1[i];
+    }
+    return array2;
 }    
+
 
 
 
@@ -64,9 +69,15 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(array1){
+   if(array1.length === 31){
+       return true;
+   }
+   else {
+       return false;
+   }
 }
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -81,8 +92,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(array1, newFlavor){
+   array1.unshift(newFlavor);
+   return array1;
 }
 
 
@@ -97,9 +109,11 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(array1){
+   array1.pop();
+   return array1;
 }
+
 
 
 
@@ -114,9 +128,11 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(array1, index){
+    let flavorAtIndex =  array1[index];
+    return flavorAtIndex;
 }
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -134,9 +150,12 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(array1, flavorToRemove){
+    let indexOfFlavor = array1.indexOf(flavorToRemove);
+    array1.splice(indexOfFlavor, 1);
+    return array1
 }
+
 
 
 
@@ -287,16 +306,16 @@ function foo(){
     return 'bar';
 }
 
-export default{
-    foo,
-    is31Flavors,
-    addFlavor,
-    removeLastFlavor,
-    getFlavorByIndex,
-    removeFlavorByName,
-    copy,
-    filterByWord,
-    getAverageWordLength,
-    getRandomFlavors
-}
+// export default{
+//     foo,
+//     is31Flavors,
+//     addFlavor,
+//     removeLastFlavor,
+//     getFlavorByIndex,
+//     removeFlavorByName,
+//     copy,
+//     filterByWord,
+//     getAverageWordLength,
+//     getRandomFlavors
+// }
 
