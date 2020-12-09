@@ -47,7 +47,7 @@ Use the copy function below to do the following:
 
 function copy(array1){
     let array2 = []
-    for (i = 0; i < array1.length; i++){
+    for (let i = 0; i < array1.length; i++){
         array2[i] = array1[i];
     }
     return array2;
@@ -179,8 +179,14 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array1, wordToFilter){
+    let newArray = []
+    for(let i = 0; i < array1.length; i++){
+        if(array1[i].includes(wordToFilter)){
+            newArray.push(array1[i])
+        }
+    }
+    return newArray;
 }
 
 
@@ -306,16 +312,16 @@ function foo(){
     return 'bar';
 }
 
-// export default{
-//     foo,
-//     is31Flavors,
-//     addFlavor,
-//     removeLastFlavor,
-//     getFlavorByIndex,
-//     removeFlavorByName,
-//     copy,
-//     filterByWord,
-//     getAverageWordLength,
-//     getRandomFlavors
-// }
+export default{
+    foo,
+    is31Flavors,
+    addFlavor,
+    removeLastFlavor,
+    getFlavorByIndex,
+    removeFlavorByName,
+    copy,
+    filterByWord,
+    getAverageWordLength,
+    getRandomFlavors
+}
 
